@@ -1,0 +1,80 @@
+```css
+/**
+ * @name Rias Gremory
+ * @author zeld
+ * @description Rias Gremory kırmızı/siyah Vencord teması
+ * @version 1.0.0
+ */
+
+:root {
+    --rias-bg: url("https://images6.alphacoders.com/137/1374425.png");
+    --rias-red: #a3132f;
+}
+
+/* Rias arka plan */
+#app-mount {
+    background: #08050a var(--rias-bg) center center / cover fixed no-repeat !important;
+}
+
+/* Koyu overlay */
+#app-mount::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: rgba(5, 3, 7, 0.58);
+}
+
+/* Discord arayüzünü öne al */
+#app-mount > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Sol panel */
+[class*="sidebar"] {
+    background: rgba(8, 5, 10, 0.82) !important;
+}
+
+/* Kullanıcı paneli */
+[class*="panels"] {
+    background: rgba(8, 5, 10, 0.88) !important;
+}
+
+/* Sohbet alanı */
+[class*="chatContent"],
+[class*="messagesWrapper"] {
+    background: rgba(8, 5, 10, 0.38) !important;
+}
+
+/* Üye listesi */
+[class*="membersWrap"] {
+    background: rgba(8, 5, 10, 0.78) !important;
+}
+
+/* Seçili kanal */
+[class*="item"][class*="selected"] {
+    background: var(--rias-red) !important;
+}
+
+/* Kanal üzerine gelince */
+[class*="item"]:hover {
+    background: rgba(163, 19, 47, 0.32) !important;
+}
+
+/* Linkler */
+a {
+    color: #ff5275 !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar-thumb {
+    background: var(--rias-red) !important;
+}
+
+/* Mesaj kutusu */
+[class*="channelTextArea"] {
+    background: rgba(10, 6, 12, 0.82) !important;
+}
+```
